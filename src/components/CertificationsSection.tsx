@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { Award, Calendar, Building, CheckCircle2, ShieldCheck, Sparkles, ExternalLink } from "lucide-react";
+import { useRef } from "react";
+import { Award, Calendar, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react";
 
 interface CertificationItem {
   title: string;
@@ -17,6 +17,19 @@ interface CertificationItem {
 }
 
 const certifications: CertificationItem[] = [
+  {
+    title: "ServiceNow Certified Application Developer (CAD)",
+    issuer: "ServiceNow",
+    date: "June 6, 2026",
+    description:
+      "Globally recognized enterprise credential validating advanced capability in designing, creating, and customizing enterprise applications, scripting (client/server), REST integrations, and security access controls on the ServiceNow platform.",
+    topics: ["Application Development", "Client & Server Scripting", "REST & Integrations", "Security & ACLs", "Data Modeling & Flow Designer"],
+    gradient: "from-purple-500/15 via-indigo-900/10 to-transparent",
+    border: "border-purple-500/30",
+    badgeBg: "bg-purple-500/15",
+    badgeColor: "text-purple-400",
+    glow: "rgba(168,85,247,0.25)",
+  },
   {
     title: "ServiceNow Certified System Administrator (CSA)",
     issuer: "ServiceNow",
@@ -55,7 +68,7 @@ const CertificationsSection = () => {
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10 max-w-5xl">
+      <div className="container mx-auto px-4 relative z-10 max-w-6xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -69,12 +82,12 @@ const CertificationsSection = () => {
           </div>
           <h2 className="section-title">Professional Certifications</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Industry and academic certifications strictly documented on resume
+            Industry and academic certifications strictly documented on resume & verified
           </p>
         </motion.div>
 
         {/* Certifications Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}
@@ -143,7 +156,7 @@ const CertificationsSection = () => {
                   <span>Verified Credential</span>
                 </span>
                 <span className="text-muted-foreground/60 text-[11px]">
-                  Resume Source of Truth
+                  Official Certification
                 </span>
               </div>
             </motion.div>

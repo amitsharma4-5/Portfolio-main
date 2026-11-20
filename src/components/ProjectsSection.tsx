@@ -1,9 +1,11 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Github, ExternalLink, ArrowRight, Sparkles, Cpu, Layers, Activity, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import { Github, ExternalLink, Sparkles, Cpu, Layers, CheckCircle2, Zap } from "lucide-react";
 
 interface ProjectDetail {
   id: string;
+  tabTitle: string;
+  tabBadge: string;
   title: string;
   category: string;
   tagline: string;
@@ -22,7 +24,103 @@ interface ProjectDetail {
 
 const projects: ProjectDetail[] = [
   {
+    id: "voicecare-ai",
+    tabTitle: "VoiceCare AI",
+    tabBadge: "Go / AI",
+    title: "VoiceCare AI — Real-Time Clinical Consultation & Workflow App",
+    category: "Agentic AI • Speech & NLP • Distributed Systems • Go",
+    tagline: "Multilingual voice-first clinical consultation engine orchestrating real-time clinical notes",
+    problem:
+      "Healthcare professionals spend over 40% of their workday typing repetitive EHR documentation and medical intake forms, creating severe clinical burnout and critical delays in patient consultations.",
+    solution:
+      "Built a high-performance clinical consultation platform featuring a Go backend microservice and modern React frontend that captures live audio streams and orchestrates agentic AI/NLP processing to generate structured clinical notes automatically.",
+    architecture: [
+      "Agentic workflow & real-time automation capturing live audio streams and orchestrating AI/NLP processing to generate structured clinical notes automatically.",
+      "DevOps & independent deployment independently architecting, deploying, and maintaining both frontend (Vercel) and backend (Render) services, managing CORS and API uptime.",
+      "High-concurrency Go microservice delivering low-latency audio stream ingestion, RESTful endpoint orchestration, and secure payload handling.",
+      "Multilingual clinical intake enabling patients to describe symptoms naturally using voice across regional languages, completely eliminating paper forms.",
+    ],
+    techStack: ["React", "Vite", "Go", "REST APIs", "Agentic AI", "NLP", "Vercel", "Render", "Tailwind CSS"],
+    keyMetrics: [
+      { label: "Agentic AI", value: "Real-Time" },
+      { label: "Backend Core", value: "Go / Golang" },
+      { label: "Clinical Notes", value: "100% Automated" },
+      { label: "Frontend Cloud", value: "Vercel" },
+      { label: "Backend Cloud", value: "Render" },
+    ],
+    github: "https://github.com/amitsharma4-5/VoiceCare-Ai",
+    live: "https://voice-care-ai-psi.vercel.app",
+    gradient: "from-cyan-500/20 via-blue-900/10 to-transparent",
+    borderColor: "border-cyan-500/30",
+    badgeColor: "bg-cyan-500/15 text-cyan-400 border-cyan-500/30",
+    glowColor: "rgba(6,182,212,0.25)",
+  },
+  {
+    id: "wewithu-ai",
+    tabTitle: "WeWithU AI",
+    tabBadge: "Full-Stack AI",
+    title: "WeWithU AI — Interview & Placement Preparation Platform",
+    category: "Full-Stack AI • Placement Prep • Career Automation",
+    tagline: "AI-assisted candidate scoring, voice mock interviews & automated ATS resume analytics",
+    problem:
+      "Engineering students and job candidates struggle with recruitment readiness due to a lack of realistic mock interview practice, objective technical evaluation, and actionable ATS resume feedback.",
+    solution:
+      "Engineered an end-to-end placement preparation platform combining voice-assisted mock interviews, multi-test placement assessments, and an automated AI resume evaluation pipeline delivering comprehensive PDF analytics reports.",
+    architecture: [
+      "Automated AI evaluation & orchestration independently engineering an AI candidate scoring and resume evaluation pipeline generating structured PDF analytics reports, reducing manual evaluation effort by 80%.",
+      "Full-stack execution building modular assessment workflows, automated progress trackers, and scalable backend APIs to deliver an end-to-end placement preparation system.",
+      "Interactive voice-assisted mock interview simulator with speech recognition, timed question prompts, and real-time contextual behavioral/technical feedback.",
+      "Multi-test mock placement exams with automated grading, percentile tracking, and Firebase cloud data synchronization.",
+    ],
+    techStack: ["React", "Node.js", "Firebase", "AI Automation", "REST APIs", "Tailwind CSS"],
+    keyMetrics: [
+      { label: "Manual Effort Reduction", value: "80%" },
+      { label: "ATS Resume Analysis", value: "Real-Time" },
+      { label: "Evaluation Delivery", value: "Instant PDF" },
+      { label: "Mock Interviews", value: "Voice-Assisted" },
+      { label: "Cloud Backend", value: "Firebase / Node" },
+    ],
+    github: "https://github.com/amitsharma4-5/WeWithyou",
+    gradient: "from-violet-500/20 via-purple-900/10 to-transparent",
+    borderColor: "border-violet-500/30",
+    badgeColor: "bg-violet-500/15 text-violet-400 border-violet-500/30",
+    glowColor: "rgba(139,92,246,0.25)",
+  },
+  {
+    id: "ai-healthcare-opd",
+    tabTitle: "AI Healthcare OPD",
+    tabBadge: "Full-Stack / OCR",
+    title: "AI Healthcare & OPD Management System",
+    category: "Full-Stack Web • Document OCR • Hospital Operations",
+    tagline: "OCR-driven medical report extraction, digital health records & automated OPD queue management",
+    problem:
+      "Traditional outpatient departments (OPDs) face extreme crowding, manual paper registration delays, and unstructured diagnostic records that impair clinical decision-making.",
+    solution:
+      "Architected a centralized digital hospital and OPD management system featuring automated OCR extraction for patient medical reports, appointment scheduling, and role-based access control.",
+    architecture: [
+      "Automated document parsing & data accuracy: Built an OCR-driven extraction pipeline to convert unstructured medical reports into structured MySQL and MongoDB records with high consistency and accuracy.",
+      "Workflow orchestration: Designed an OPD appointment and queue management platform with role-based access across patients, doctors, and administrators to eliminate scheduling bottlenecks.",
+      "Hybrid database architecture utilizing MongoDB for unstructured diagnostic history and MySQL for relational transaction consistency.",
+      "Role-based secure authentication ensuring patient confidentiality and verified clinical audit trails.",
+    ],
+    techStack: ["React.js", "Node.js", "MongoDB", "MySQL", "OCR", "Express.js", "REST APIs", "Tailwind CSS"],
+    keyMetrics: [
+      { label: "Data Consistency", value: "High Accuracy" },
+      { label: "Document Ingestion", value: "Automated OCR" },
+      { label: "Scheduling Bottlenecks", value: "Eliminated" },
+      { label: "Architecture", value: "Hybrid DB" },
+      { label: "RBAC Security", value: "Patient/Doc/Admin" },
+    ],
+    github: "https://github.com/amitsharma4-5/AI-Healthcare-OPD-Management-System",
+    gradient: "from-emerald-500/20 via-teal-900/10 to-transparent",
+    borderColor: "border-emerald-500/30",
+    badgeColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
+    glowColor: "rgba(16,185,129,0.25)",
+  },
+  {
     id: "crop-health",
+    tabTitle: "Crop Health AI",
+    tabBadge: "CV / ML",
     title: "AI-Powered Crop Health Diagnosis System",
     category: "Machine Learning • Computer Vision • Agritech",
     tagline: "Automated multi-class deficiency classification & fertilizer prescription engine",
@@ -42,16 +140,18 @@ const projects: ProjectDetail[] = [
       { label: "Dataset Processed", value: "5,000+ Images" },
       { label: "Model F1-Score", value: "0.84" },
       { label: "False Negative Reduction", value: "15%" },
-      { label: "Generalization Improvement", value: "+12%" },
+      { label: "Generalization Gain", value: "+12%" },
     ],
     github: "https://github.com/amitsharma4-5/AI-Crop-Health-Diagnosis",
-    gradient: "from-emerald-500/20 via-green-900/10 to-transparent",
-    borderColor: "border-emerald-500/30",
-    badgeColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
-    glowColor: "rgba(16,185,129,0.25)",
+    gradient: "from-green-500/20 via-emerald-900/10 to-transparent",
+    borderColor: "border-green-500/30",
+    badgeColor: "bg-green-500/15 text-green-400 border-green-500/30",
+    glowColor: "rgba(34,197,94,0.25)",
   },
   {
     id: "rural-health",
+    tabTitle: "Smart Health IoT",
+    tabBadge: "IoT / Edge",
     title: "Smart Rural Health & AI-IoT Medical Guidance System",
     category: "AI & NLP • IoT Embedded Systems • Edge Computing",
     tagline: "Offline-resilient vital telemetry & symptom triage engine deployed on Raspberry Pi",
@@ -84,7 +184,7 @@ const projects: ProjectDetail[] = [
 const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeTab, setActiveTab] = useState<string>("crop-health");
+  const [activeTab, setActiveTab] = useState<string>("voicecare-ai");
 
   const selectedProject = projects.find((p) => p.id === activeTab) || projects[0];
 
@@ -108,7 +208,7 @@ const ProjectsSection = () => {
           </div>
           <h2 className="section-title">Featured Projects</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Production-grade machine learning, computer vision, and IoT edge architectures
+            Production-grade agentic AI, full-stack microservices, computer vision, and IoT edge architectures
           </p>
         </motion.div>
 
@@ -126,9 +226,9 @@ const ProjectsSection = () => {
                     : "glass-card border border-white/10 text-muted-foreground hover:border-primary/40 hover:text-foreground"
                 }`}
               >
-                <span>{p.title.split(" & ")[0].split(" ")[0]} Project</span>
+                <span>{p.tabTitle}</span>
                 <span className={`text-[11px] px-2 py-0.5 rounded-full ${isActive ? "bg-white/20 text-white" : "bg-white/5 text-muted-foreground"}`}>
-                  {p.id === "crop-health" ? "CV / ML" : "IoT / Edge"}
+                  {p.tabBadge}
                 </span>
               </button>
             );
@@ -163,8 +263,8 @@ const ProjectsSection = () => {
                 </p>
               </div>
 
-              {/* GitHub Button */}
-              <div className="shrink-0 flex items-center gap-3">
+              {/* GitHub & Live Demo Buttons */}
+              <div className="shrink-0 flex flex-wrap items-center gap-3">
                 <a
                   href={selectedProject.github}
                   target="_blank"
@@ -175,6 +275,17 @@ const ProjectsSection = () => {
                   <span>GitHub Repository</span>
                   <ExternalLink size={14} />
                 </a>
+                {selectedProject.live && (
+                  <a
+                    href={selectedProject.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs md:text-sm bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)] transition-all hover:scale-105"
+                  >
+                    <ExternalLink size={16} />
+                    <span>Live Demo</span>
+                  </a>
+                )}
               </div>
             </div>
 

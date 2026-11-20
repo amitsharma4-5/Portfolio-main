@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Trophy, Star, Sparkles, CheckCircle2, Award, Code2, ShieldCheck } from "lucide-react";
+import { Trophy, CheckCircle2, Award, Code2, ShieldCheck } from "lucide-react";
 import { useCodingProfiles } from "@/hooks/useCodingProfiles";
 
 interface AchievementItem {
@@ -63,22 +63,22 @@ const AchievementsSection = () => {
       glow: "rgba(16,185,129,0.25)",
     },
     {
-      title: "Certified Full-Stack Architect",
+      title: "ServiceNow Certified (CAD & CSA)",
       category: "Industry Certifications",
-      subtitle: "System Design & Web Technologies",
-      year: "2025",
+      subtitle: "Enterprise Application & Platform Development",
+      year: "2025 - 2026",
       description:
-        "Earned extensive industry-recognized certifications spanning Web Architecture, Backend Engineering, Cloud Infrastructure, and advanced deployment strategies.",
+        "Earned prestigious ServiceNow Certified Application Developer (CAD) and Certified System Administrator (CSA) credentials, proving advanced expertise in enterprise workflow automation and application development.",
       highlights: [
-        "Architecting robust monoliths and microservices",
-        "Implementing secure authentication flows and database schemas",
-        "Automated CI/CD pipelines and deployment best practices",
+        "Developing enterprise-grade applications with server and client-side scripting",
+        "Configuring REST API integrations, business rules, and UI actions",
+        "Automating ITSM lifecycle, service catalogs, and ACL security architectures",
       ],
       icon: ShieldCheck,
-      color: "text-primary",
-      badgeBg: "bg-primary/15 text-primary border-primary/30",
-      border: "border-primary/30",
-      glow: "rgba(139,92,246,0.25)",
+      color: "text-purple-400",
+      badgeBg: "bg-purple-500/15 text-purple-400 border-purple-500/30",
+      border: "border-purple-500/30",
+      glow: "rgba(168,85,247,0.25)",
     },
   ];
 

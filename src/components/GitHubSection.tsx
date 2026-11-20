@@ -25,6 +25,7 @@ const languageColors: Record<string, string> = {
   Python: "#3572A5",
   JavaScript: "#f1e05a",
   TypeScript: "#3178c6",
+  Go: "#00ADD8",
   HTML: "#e34c26",
   CSS: "#563d7c",
   Java: "#b07219",
@@ -38,6 +39,28 @@ const languageColors: Record<string, string> = {
 const GITHUB_USERNAME = "amitsharma4-5";
 
 const fallbackRepos: Repo[] = [
+  {
+    id: 101,
+    name: "VoiceCare-Ai",
+    description: "VoiceCare AI is a multilingual, AI-powered healthcare intake system with real-time clinical note generation.",
+    html_url: "https://github.com/amitsharma4-5/VoiceCare-Ai",
+    stargazers_count: 0,
+    forks_count: 0,
+    language: "Go",
+    fork: false,
+    updated_at: "2026-02-01T00:00:00Z",
+  },
+  {
+    id: 102,
+    name: "WeWithyou",
+    description: "WeWithU is a full-stack AI career preparation platform with voice-assisted mock interviews and ATS scoring.",
+    html_url: "https://github.com/amitsharma4-5/WeWithyou",
+    stargazers_count: 0,
+    forks_count: 0,
+    language: "JavaScript",
+    fork: false,
+    updated_at: "2025-12-01T00:00:00Z",
+  },
   {
     id: 1,
     name: "AI-Crop-Health-Diagnosis",
