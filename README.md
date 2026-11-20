@@ -106,7 +106,7 @@
 
 ## 📬 Contact & Connect
 
-* **Portfolio**: [amitsharma4-5.github.io](https://github.com/amitsharma4-5)
+* **Portfolio**: [amit45.online](https://amit45.online)
 * **LinkedIn**: [linkedin.com/in/amit-kumar-sharma](https://linkedin.com)
 * **LeetCode**: [leetcode.com/u/amitsharma4_5](https://leetcode.com/u/amitsharma4_5/)
 * **Email**: [amit04.5sharma@gmail.com](mailto:amit04.5sharma@gmail.com)
